@@ -9,6 +9,7 @@ var ctrl = this;
 
 ctrl.findItem = function () {
   var short_name = ctrl.user.menuitem;
+  short_name = short_name.toUpperCase();
   var fname = ctrl.user.fname;
   var lname = ctrl.user.lname;
   var tlf = ctrl.user.tlf;
