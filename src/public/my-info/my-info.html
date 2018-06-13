@@ -1,0 +1,14 @@
+
+<div ng-if="infoCtrl.saved">
+<h2>Welcome {{infoCtrl.user.firstname}} {{infoCtrl.user.lastname}}</h2>
+<h3>Favorite Dish</h3>
+<h4>{{infoCtrl.item.name}}</h4>
+<img ng-src="https://pacific-anchorage-93797.herokuapp.com/images/{{infoCtrl.item.short_name}}.jpg" alt="">
+<p>{{infoCtrl.item.description}}</p>
+
+</div>
+<div ng-if="!infoCtrl.saved">
+  Not Signed Up Yet.<a ui-sref="public.signup">
+  Sign up Now!</a>
+
+</div>

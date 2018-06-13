@@ -1,0 +1,25 @@
+<div class="container">
+
+  <form name="newsform" novalidate method="POST">
+  <label for="firstname">First Name: </label>
+  <input type="text" name="fname" value="" id="firstname" ng-model="SignCtrl.user.fname" required>
+  <span ng-if="newsform.fname.$error.required && newsform.fname.$touched"> First name is empty</span><br>
+  <label for="lastname">Last Name: </label>
+  <input type="text" name="lname" value="" id="lastname" ng-model="SignCtrl.user.lname" required>
+  <span ng-if="newsform.lname.$error.required && newsform.lname.$touched"> Last name is empty</span><br>
+  <label for="email">Email: </label>
+  <input type="text" name="email" value="" id="email" ng-model="SignCtrl.user.email" required>
+  <span ng-if="newsform.email.$error.required && newsform.email.$touched"> Email is empty</span><br>
+  <label for="tlf">Telephone Number: </label>
+  <input type="tel" name="tlf" value="" id="tlf" ng-model="SignCtrl.user.tlf" required>
+  <span ng-if="newsform.tlf.$error.required && newsform.tlf.$touched"> Telephone number is empty</span><br>
+  <label for="menu-item">Favorite Dish (Menu Number): </label>
+  <input type="text" name="menuitem" value="" id="menu-item" ng-model="SignCtrl.user.menuitem">
+    <span ng-if="SignCtrl.myItem.$$state.value=='error'">No such menu number exists</span>
+    <span ng-if="SignCtrl.myItem.$$state.value.short_name">Your information has been saved</span>
+
+  <button type="submit" ng-disable="newsform.$invalid" ng-click="SignCtrl.findItem()" name="button">Send</button>
+
+  </form>
+
+</div>
