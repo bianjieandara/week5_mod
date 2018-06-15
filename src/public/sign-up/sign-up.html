@@ -2,13 +2,13 @@
 
   <form name="newsform" novalidate method="POST">
   <label for="firstname">First Name: </label>
-  <input type="text" name="fname" value="" id="firstname" ng-model="SignCtrl.user.fname" required>
+  <input type="text" name="fname" value="" id="firstname" ng-model="SignCtrl.user.fname" placeholder="First Name" required>
   <span ng-if="newsform.fname.$error.required && newsform.fname.$touched"> First name is empty</span><br>
   <label for="lastname">Last Name: </label>
-  <input type="text" name="lname" value="" id="lastname" ng-model="SignCtrl.user.lname" required>
+  <input type="text" name="lname" value="" id="lastname" ng-model="SignCtrl.user.lname" placeholder="Last Name" required>
   <span ng-if="newsform.lname.$error.required && newsform.lname.$touched"> Last name is empty</span><br>
   <label for="email">Email: </label>
-  <input type="email" name="email" value="" id="email" ng-model="SignCtrl.user.email" required>
+  <input type="email" name="email" value="" id="email" ng-model="SignCtrl.user.email" placeholder="Email" required>
   <span ng-if="newsform.email.$invalid && newsform.email.$touched"> Must be a valid email address: handle@domain format</span><br>
   <label for="tlf">Telephone Number: </label>
   <input type="tel" name="tlf" value="" id="tlf" ng-model="SignCtrl.user.tlf" pattern="(\d{3})-(\d{3})-(\d{4})" placeholder="Phone ###-###-####" required>
