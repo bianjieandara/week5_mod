@@ -8,11 +8,11 @@
   <input type="text" name="lname" value="" id="lastname" ng-model="SignCtrl.user.lname" required>
   <span ng-if="newsform.lname.$error.required && newsform.lname.$touched"> Last name is empty</span><br>
   <label for="email">Email: </label>
-  <input type="text" name="email" value="" id="email" ng-model="SignCtrl.user.email" required>
-  <span ng-if="newsform.email.$error.required && newsform.email.$touched"> Email is empty</span><br>
+  <input type="email" name="email" value="" id="email" ng-model="SignCtrl.user.email" required>
+  <span ng-if="newsform.email.$error.$invalid && newsform.email.$touched"> Must be a valid email address: handle@domain format<br>
   <label for="tlf">Telephone Number: </label>
-  <input type="tel" name="tlf" value="" id="tlf" ng-model="SignCtrl.user.tlf" required>
-  <span ng-if="newsform.tlf.$error.required && newsform.tlf.$touched"> Telephone number is empty</span><br>
+  <input type="tel" name="tlf" value="" id="tlf" ng-model="SignCtrl.user.tlf" pattern="(\d{3})-(\d{3})-(\d{4})"  placeholder="Phone ###-###-####" required>
+  <span ng-if="newsform.tlf.$error.$invalid && newsform.tlf.$touched">Phone must be in the format ###-###-####<br>
   <label for="menu-item">Favorite Dish (Menu Number): </label>
   <input type="text" name="menuitem" value="" id="menu-item" ng-model="SignCtrl.user.menuitem">
     <span ng-if="SignCtrl.myItem.$$state.value=='error'">No such menu number exists</span>
